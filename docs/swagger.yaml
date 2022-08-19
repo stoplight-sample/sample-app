@@ -1,0 +1,28 @@
+info:
+  contact: {}
+paths:
+  /:
+    get:
+      consumes:
+      - application/json
+      description: Print Hello World!
+      operationId: hello
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            type: string
+        "400":
+          description: errorMessage
+          schema:
+            type: string
+        "500":
+          description: errorMessage
+          schema:
+            type: string
+      summary: Print Hello World!
+      tags:
+      - hello
+swagger: "2.0"
