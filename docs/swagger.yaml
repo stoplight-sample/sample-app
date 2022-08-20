@@ -25,4 +25,28 @@ paths:
       summary: Print Hello World!
       tags:
       - hello
+  /bye:
+    get:
+      consumes:
+      - application/json
+      description: Print Bye World!
+      operationId: bye
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            type: string
+        "400":
+          description: errorMessage
+          schema:
+            type: string
+        "500":
+          description: errorMessage
+          schema:
+            type: string
+      summary: Print Bye World!
+      tags:
+      - bye
 swagger: "2.0"

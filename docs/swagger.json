@@ -39,6 +39,42 @@
                     }
                 }
             }
+        },
+        "/bye": {
+            "get": {
+                "description": "Print Bye World!",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "bye"
+                ],
+                "summary": "Print Bye World!",
+                "operationId": "bye",
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "errorMessage",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "500": {
+                        "description": "errorMessage",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
         }
     }
 }
