@@ -1,44 +1,52 @@
 {
-    "swagger": "2.0",
-    "info": {
-        "contact": {}
-    },
-    "paths": {
-        "/": {
-            "get": {
-                "description": "Print Hello World!",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "hello"
-                ],
-                "summary": "Print Hello World!",
-                "operationId": "hello",
-                "responses": {
-                    "201": {
-                        "description": "Created",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    "400": {
-                        "description": "errorMessage",
-                        "schema": {
-                            "type": "string"
-                        }
-                    },
-                    "500": {
-                        "description": "errorMessage",
-                        "schema": {
-                            "type": "string"
-                        }
-                    }
-                }
+  "swagger": "2.0",
+  "info": {
+    "contact": {},
+    "description": "",
+    "version": "",
+    "title": ""
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "description": "Print Hello World!",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "hello"
+        ],
+        "summary": "Print Hello World!",
+        "operationId": "hello",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "schema": {
+              "type": "string"
             }
+          },
+          "400": {
+            "description": "errorMessage",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "500": {
+            "description": "errorMessage",
+            "schema": {
+              "type": "string"
+            }
+          }
         }
+      }
     }
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "host": "8055"
 }
