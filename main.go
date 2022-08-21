@@ -23,6 +23,7 @@ func initMiddleware(e *echo.Echo) {
 func initRouting(e *echo.Echo) {
 	// 起動確認用API
 	e.GET("/", hello)
+	e.GET("/bye", bye)
 }
 
 // @Tags hello
@@ -38,6 +39,21 @@ func initRouting(e *echo.Echo) {
 func hello(c echo.Context) error {
 	log.Println("Hello World!")
 	return c.JSON(http.StatusOK, "Hello World!")
+}
+
+// @Tags bye
+// @Summary Print Bye World!
+// @Description Print Bye World!
+// @ID bye
+// @Accept  json
+// @Produce  json
+// @Success 201 {object} string
+// @Failure 400 {string} string "errorMessage"
+// @Failure 500 {string} string "errorMessage"
+// @Router /bye [get]
+func bye(c echo.Context) error {
+	log.Println("Bye World!")
+	return c.JSON(http.StatusOK, "Bye World!")
 }
 
 func main() {
