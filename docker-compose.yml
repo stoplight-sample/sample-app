@@ -4,7 +4,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    container_name: stoplight-sample
+    container_name: stoplight-sample-app
     volumes:
       - '.:/go/src/app'
     ports:
